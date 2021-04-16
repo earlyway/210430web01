@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><!-- 21.04.16 pm16 -->
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+function check(){//함수, 리턴타입이 없음, document->현재 페이지를 의미.
+	var price=document.input.price.value;//name이 input인 태그내부의 price태그의 값.
+	var amount=document.input.amount.value;
+	if(price==""){//빈값이면
+		alert("가격을 입력하세요.");//경고창을 띄우고
+		document.input.price.focus();//커서 이동
+		return;//함수 종료
+	}
+	if(amount==""){
+		alert("수량을 입력하세요.");
+		document.input.amount.focus();
+		return;
+	}
+	document.input.submit();//폼에 입력된 값을 서버에 제출
+}
+</script>
+</head>
+<body>
+<form name="input" action="buttonf_result.jsp" method="post">
+가격 : <input type="text" name="price"><br>
+수량 : <input type="text" name="amount"><br>
+<button type="button" onclick="check()">계산</button> 
+</form>
+</body>
+</html>

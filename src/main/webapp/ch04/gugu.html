@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function check(){//함수, 리턴타입이 없음, document->현재 페이지를 의미.
+	var dan=document.input.dan.value;//name이 input인 태그내부의 price태그의 값.
+	if(dan==""){//빈값이면
+		alert("단을 입력하세요.");//경고창을 띄우고
+		document.input.dan.focus();//커서 이동
+		return;//함수 종료
+	}
+	document.input.submit();
+}
+	</script>
+</head>
+<body>
+<form name="input" action="gugu_result.jsp" method="post">
+단을 입력하세요  <input type="text" name="dan"><br>
+<button type="button" onclick="check()">확인</button> 
+
+</body>
+</html>
