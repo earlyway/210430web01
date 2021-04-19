@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function check(){//함수, 리턴타입이 없음, document->현재 페이지를 의미.
+	var basic=document.input.basic.value;//name이 input인 태그내부의 price태그의 값.
+	if(basic==""){//빈값이면
+		alert("기본급을 입력하세요.");//경고창을 띄우고
+		document.input.basic.focus();//커서 이동
+		return;//함수 종료
+	}
+	document.input.submit();
+}
+	</script>
+</head>
+<body>
+<form name="input" action="test0419.jsp" method="post">
+이름 :   <input type="text" name="cname"><br>
+직급 :   <input type="text" name="level"><br>
+기본급(단위 : 만원) :   <input type="text" name="basic"><br>
+보너스(단위 : 만원) :   <input type="text" name="bonus"><br>
+<button type="button" onclick="check()">확인</button> 
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>//자바스크립트 영역, document=현재 문서라는 뜻. getElementid(bar)bar라는 태그의 아이디
+function start(){
+
+var bar=document.getElementById("bar");
+bar.max=100;//최대값을 200으로.
+var progress=document.getElementById("progress");
+loaded=0;
+ //함수이름=function(){함수의 내용}
+var load=function(){
+	loaded+=4;
+	bar.value=loaded;
+	progress.innerHTML=" 진행율 : "+loaded;
+	if(loaded==bar.max){
+		clearInterval(func);//타이머를 종료
+	}
+};
+var func=setInterval(load, 500);//타이머 설정. setInterval(함수,시간)
+}
+</script>
+</head>
+<body>
+<!-- 버튼을 누르면(onclick) 자바스크립트 start()함수가 호출되어 실행됨 -->
+<input type="button" value="시작" onclick="start()">
+<!-- 현재값0 최대값100인 프로그레스바 -->
+<!-- span : 줄바꿈을 하지않는 태그 -->
+<progress id="bar" value="0" max="100"></progress>
+<span id="progress"></span>
+</body>
+</html>
