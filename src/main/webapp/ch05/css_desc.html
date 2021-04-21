@@ -1,0 +1,19 @@
+<!DOCTYPE html> <!-- 21.04.20 pm14 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+h1 em {color:red;}/* 자손태그, depth에 관계없음*/
+body h1 { color:blue;}
+body > h1 {color:yellow;}/* 직계 자손 태그 */
+</style>
+</head>         <!--  태그,태그=>여러개의 태그-->
+<body>          <!--  태그 태그=>하위 태그 8라인-->
+<h1>			<!-- 태그 > 태그 ->>직계자손 태그 9라인-->
+제목<em>태그</em>
+</h1>
+<em>강조할 내용</em>
+<div><h1>제목1태그1</h1></div>
+</body>
+</html>
