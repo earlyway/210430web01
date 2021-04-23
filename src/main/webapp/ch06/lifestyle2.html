@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- ol : 순서가 있는 리스트, inline : 줄바꿈을 하지않고 배치, float 배치방향 -->
+<style>
+ol {
+	list-style : none;
+	text-align : center;
+	border-top : 1px solid red;
+	border-bottom : 1px solid red;
+	padding : 10px 0; 
+}
+ol li {
+	display : inline;
+	text-transform : uppercase;
+	padding : 0 10px; letter-spacing : 13px;
+}
+ol li a { text-decoration : none; color : black;}
+ol li a :hover { text-decoration : underline; }
+div { display : inline; float : right; border : 1px solid red; }
+</style>
+</head>
+<body>
+<ol>
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Blog</a></li>
+	<li><a href="#">About</a></li>
+	<li><a href="#">Contact</a></li>
+</ol>
+<div>div1</div>
+<div>div2</div>
+<div>div3</div>
+
+</body>
+</html>

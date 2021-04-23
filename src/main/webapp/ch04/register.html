@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function check(){//함수, 리턴타입이 없음, document->현재 페이지를 의미.
+	var id=document.input.id.value;//name이 input인 태그내부의 price태그의 값.
+	var pwd=document.input.pwd.value;
+	var name=document.input.name.value;
+	var phone=document.input.phone.value;
+	var phone1=document.input.phone1.value;
+	var phone2=document.input.phone2.value;
+	var email=document.input.email.value;
+	var email1=document.input.email1.value;
+	if(id==""){//빈값이면
+		alert("아이디를 입력하세요.");//경고창을 띄우고
+		document.input.id.focus();//커서 이동
+		return;//함수 종료
+	}
+	if(pwd==""){
+		alert("비번을 입력하세요.");
+		document.input.pwd.focus();
+		return;
+	}
+	document.input.submit();//폼에 입력된 값을 서버에 제출
+}
+</script>
+</head>
+<body>
+<form action="register_result.jsp" method="post">
+<table>
+	<tr>
+		<td>아이디</td>
+		<td><input type="text" name="id" size="10"></td>
+	</tr>
+	<tr>
+		<td>비밀번호</td>
+		<td><input type="password" name="pwd" size="10"></td>
+	</tr>
+	<tr>
+		<td>이름</td>
+		<td><input type="text" name="name" size="10"></td>
+	</tr>
+	<tr>
+		<td>핸드폰</td>
+		<td><select name="phone">
+			<option value="a" selected>010</option>
+			<option value="b" selected>011</option>
+		</select> - <input type="text" name="phone1" size="10"> - <input type="text" name="phone2" size="10"></td>
+	</tr>
+	<tr>
+		<td>이메일</td>
+		<td><input type="text" name="email" size="10">@<select name="address">
+			<option value="f" selected>naver.com</option>
+			<option value="g" selected>google.com</option>
+		</select></td>
+	</tr>
+	<tr>
+		<td colspan="2"><input type="submit" value="회원가입"></td>
+		</tr>
+</table>
+</form>
+</body>
+</html>
